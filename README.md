@@ -4,18 +4,18 @@ This repository contains code files covering various concepts and topics in C++ 
 
 ## Table of Contents
 
-1. [Basics of C++](./basics)
-2. [Object Oriented Programming](./oop)
-3. [Memory Management](./memory_management)
-4. [Files and Streams](./files_streams)
-5. [Exception Handling](./exception_handling)
-6. [Casting Operators](./casting_operators)
-7. [Namespaces](./namespaces)
-8. [Templates](./templates)
-9. [STL (Standard Template Library)](./stl)
-10. [Preprocessor](./preprocessor)
-11. [Time and Space Complexity Analysis](./complexity_analysis)
-12. [Data Structures](./data_structures)
+1. [Basics of C++]
+2. [Object Oriented Programming]
+3. [Memory Management]
+4. [Files and Streams]
+5. [Exception Handling]
+6. [Casting Operators]
+7. [Namespaces]
+8. [Templates]
+9. [STL (Standard Template Library)]
+10. [Preprocessor]
+11. [Time and Space Complexity Analysis]
+12. [Data Structures]
 
 ## Topics Covered
 
