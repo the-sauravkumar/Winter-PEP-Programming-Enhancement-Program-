@@ -1,0 +1,28 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+
+void printStars(int required) 
+{
+    int outer, inner;
+   for(outer = 1; outer <= required; outer++) 
+   {
+      for(inner = 1; inner <= required-outer; inner++)
+        cout << " ";
+
+      for(inner = 1; inner <= outer; inner++)
+        cout << "* ";
+
+      cout << "\n";
+   }
+}
+
+int main() 
+{
+    int numStar;
+
+    std::cin >> numStar;
+
+    printStars(numStar);
+}
