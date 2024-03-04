@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+
+struct bankAccount {
+    int accountNumber;
+    std::string name;
+    double balance;
+    std::string ifscCode;
+};
+
+void inputBankDetails(bankAccount *a) {
+    std::cout << "Enter account details:\n";
+    std::cout << "Account Number: ";
+    std::cin >> a->accountNumber;
+
+    std::cout << "Name: ";
+    std::cin.ignore(); // Clear the buffer
+    std::getline(std::cin, a->name);
+
+    std::cout << "Balance: ";
+    std::cin >> a->balance;
+
+    std::cout << "IFSC Code: ";
+    std::cin >> a->ifscCode;
+}
+
+void addMoney(bankAccount *a, int amt) {
+    a->balance += amt;
+}
+
+double checkBalance(const bankAccount *a) {
+    return a->balance;
+}
+
+int main() {
+    // Allocate memory for a bankAccount structure using new
+    bankAccount *b = new bankAccount;
+
+    // Call the function to input bank details
+    inputBankDetails(b);
+
+    // Access and print the data
+    std::cout << "\nBank Details:\n";
+    std::cout << "Account Number: " << b->accountNumber << std::endl;
+    std::cout << "Name: " << b->name << std::endl;
+    std::cout << "Balance: $" << checkBalance(b) << std::endl; // Use checkBalance function
+    std::cout << "IFSC Code: " << b->ifscCode << std::endl;
+
+    // Call the function to add money
+    addMoney(b, 100);
+
+    // Display updated balance
+    std::cout << "\nUpdated Balance: $" << checkBalance(b) << std::endl;
+
+    // Don't forget to free the dynamically allocated memory using delete
+    delete b;
+
+    return 0;
+}
